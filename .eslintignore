@@ -1,0 +1,5 @@
+build
+dist
+tests
+node_modules
+coverage
