@@ -82,7 +82,7 @@ new WebpackDevServer(webpack({
                 },
                 include: [
                     path.join(__dirname, '../demo'),
-                    path.join(__dirname, '../EnableTransition.tsx'),
+                    path.join(__dirname, '../src'),
                 ]
             },
             {

@@ -10,7 +10,7 @@ const { deleteFolder, runTask, runCmd } = require("./util");
 
 
 const config = {
-    baseDir: '../../../enable-transition-npm'
+    baseDir: `../../../${pkg.name}-npm`
 };
 //cwd
 module.exports = async function () {

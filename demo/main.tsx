@@ -1,5 +1,5 @@
 import * as React from 'react';
-import EnableTransition from "../EnableTransition";
+import EnableTransition from "../src/EnableTransition";
 
 class TransitionTest extends React.PureComponent {
 

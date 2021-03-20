@@ -25,7 +25,7 @@ All rights reserved.
         })
     ];
     const compiler = webpack({
-        entry: '../../EnableTransition.tsx',
+        entry: '../../src/EnableTransition.tsx',
         output: {
             path: path.join(__dirname, '../../dist'),
             filename: name,
@@ -47,8 +47,7 @@ All rights reserved.
                                 '@babel/preset-env',
                                 {
                                     'targets': {
-                                        /*'browsers': ['ie >= 9', 'chrome >= 62'],*/
-                                        'esmodules': true
+                                        'browsers': ['ie >= 9', 'chrome >= 62'],
                                     }
                                 }
                             ],
@@ -81,7 +80,7 @@ All rights reserved.
                         ]
                     },
                     include: [
-                        path.join(__dirname, '../../EnableTransition.tsx'),
+                        path.join(__dirname, '../../src'),
                     ]
                 }
             ]
@@ -113,10 +112,10 @@ module.exports =function(){
         done()
     });
     gulp.task('webpack', (done) => {
-        webpackCompile(false,'enable-transition.js',done)
+        webpackCompile(false,`${pkg.name}.js`,done)
     });
     gulp.task('minimize', (done) => {
-        webpackCompile(true,'enable-transition.min.js',done)
+        webpackCompile(true,`${pkg.name}.min.js`,done)
     });
     gulp.task(
         'unpkg',

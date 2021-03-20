@@ -1,0 +1,167 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>enable-transition</title>
+	<meta name="description" content="Documentation for enable-transition">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">enable-transition</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>enable-transition</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p>📦 <strong>Installation</strong></p>
+				<pre><code class="language-javascript"><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> </span><span style="color: #001080">enable</span><span style="color: #000000">-</span><span style="color: #001080">transition</span>
+</code></pre>
+				<p>🔨 <strong>Usage</strong></p>
+				<pre><code class="language-javascript"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Test</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">React</span><span style="color: #000000">.</span><span style="color: #267F99">PureComponent</span><span style="color: #000000"> {</span>
+
+<span style="color: #000000">    </span><span style="color: #001080">state</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">        </span><span style="color: #001080">num:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">visible:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">display:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;none&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #098658">100</span>
+<span style="color: #000000">    };</span>
+
+<span style="color: #000000">    </span><span style="color: #795E26">onToggle</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #795E26">setState</span><span style="color: #000000">({</span><span style="color: #001080">num:</span><span style="color: #000000"> (</span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">state</span><span style="color: #000000">.</span><span style="color: #001080">num</span><span style="color: #000000"> + </span><span style="color: #098658">1</span><span style="color: #000000">) % </span><span style="color: #098658">2</span><span style="color: #000000">});</span>
+
+<span style="color: #000000">    </span><span style="color: #795E26">onToggle2</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #795E26">setState</span><span style="color: #000000">(({</span><span style="color: #001080">visible</span><span style="color: #000000">}: </span><span style="color: #267F99">any</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> ({</span><span style="color: #001080">visible:</span><span style="color: #000000"> !</span><span style="color: #001080">visible</span><span style="color: #000000">}));</span>
+
+<span style="color: #000000">    </span><span style="color: #795E26">onToggle3</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #795E26">setState</span><span style="color: #000000">(({</span><span style="color: #001080">display</span><span style="color: #000000">}: </span><span style="color: #267F99">any</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> ({</span><span style="color: #001080">display:</span><span style="color: #000000"> </span><span style="color: #001080">display</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;block&#039;</span><span style="color: #000000"> ? </span><span style="color: #A31515">&#039;none&#039;</span><span style="color: #000000"> : </span><span style="color: #A31515">&#039;block&#039;</span><span style="color: #000000">}));</span>
+
+<span style="color: #000000">    </span><span style="color: #795E26">onToggle4</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #795E26">setState</span><span style="color: #000000">(({</span><span style="color: #001080">height</span><span style="color: #000000">}: </span><span style="color: #267F99">any</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> ({</span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #001080">height</span><span style="color: #000000"> === </span><span style="color: #098658">100</span><span style="color: #000000"> ? </span><span style="color: #0000FF">undefined</span><span style="color: #000000"> : </span><span style="color: #098658">100</span><span style="color: #000000">}));</span>
+
+<span style="color: #000000">    </span><span style="color: #795E26">render</span><span style="color: #000000">() {</span>
+<span style="color: #000000">        </span><span style="color: #0000FF">const</span><span style="color: #000000"> {</span><span style="color: #0070C1">num</span><span style="color: #000000">, </span><span style="color: #0070C1">visible</span><span style="color: #000000">, </span><span style="color: #0070C1">display</span><span style="color: #000000">, </span><span style="color: #0070C1">height</span><span style="color: #000000">} = </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">state</span><span style="color: #000000">;</span>
+<span style="color: #000000">        </span><span style="color: #AF00DB">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">            </span><span style="color: #800000">&lt;div&gt;</span>
+<span style="color: #000000">                1、style切换-高度切换</span>
+<span style="color: #000000">                </span><span style="color: #800000">&lt;div</span><span style="color: #000000"> </span><span style="color: #FF0000">className</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #A31515">&#039;container&#039;</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">                    </span><span style="color: #800000">&lt;</span><span style="color: #267F99">EnableTransition</span><span style="color: #000000"> </span><span style="color: #FF0000">attribute</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #A31515">&#039;height&#039;</span><span style="color: #0000FF">}</span><span style="color: #000000">  </span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">                        </span><span style="color: #0000FF">{</span><span style="color: #000000FF">(</span><span style="color: #001080">ref</span><span style="color: #000000">:</span><span style="color: #000000FF"> </span><span style="color: #267F99">React</span><span style="color: #000000FF">.</span><span style="color: #267F99">LegacyRef</span><span style="color: #000000FF">&lt;</span><span style="color: #267F99">HTMLDivElement</span><span style="color: #000000FF">&gt;) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> {</span>
+<span style="color: #000000FF">                            </span><span style="color: #AF00DB">return</span><span style="color: #000000FF"> </span><span style="color: #800000">&lt;div</span>
+<span style="color: #000000FF">                                </span><span style="color: #FF0000">ref</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">ref</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">                                </span><span style="color: #FF0000">style</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #000000FF">{</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">width:</span><span style="color: #000000FF"> </span><span style="color: #098658">100</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">transition:</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;all 500ms&#039;</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">height:</span><span style="color: #000000FF"> </span><span style="color: #001080">height</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">backgroundColor:</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;red&#039;</span>
+<span style="color: #000000FF">                                }</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">                            </span><span style="color: #800000">&gt;</span><span style="color: #000000FF">高度切换</span>
+<span style="color: #000000FF">                            </span><span style="color: #800000">&lt;/div&gt;</span>
+<span style="color: #000000FF">                        }</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">                    </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">EnableTransition</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">                    </span><span style="color: #800000">&lt;button</span><span style="color: #000000"> </span><span style="color: #FF0000">onClick</span><span style="color: #000000">=</span><span style="color: #0000FF">{this</span><span style="color: #000000FF">.</span><span style="color: #001080">onToggle4</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span><span style="color: #000000">toggle</span><span style="color: #800000">&lt;/button&gt;</span>
+<span style="color: #000000">                </span><span style="color: #800000">&lt;/div&gt;</span>
+<span style="color: #000000">                2、style切换-display切换</span>
+<span style="color: #000000">                </span><span style="color: #800000">&lt;div</span><span style="color: #000000"> </span><span style="color: #FF0000">className</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #A31515">&#039;container&#039;</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">                    </span><span style="color: #800000">&lt;</span><span style="color: #267F99">EnableTransition</span><span style="color: #000000"> </span><span style="color: #FF0000">attribute</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #A31515">&#039;display&#039;</span><span style="color: #0000FF">}</span><span style="color: #000000"> </span><span style="color: #FF0000">displayNone</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #000000FF">{</span><span style="color: #001080">setHeightZero:</span><span style="color: #0000FF">true</span><span style="color: #000000FF">,</span><span style="color: #001080">setWidthZero:</span><span style="color: #0000FF">true</span><span style="color: #000000FF">}</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">                        </span><span style="color: #0000FF">{</span><span style="color: #000000FF">(</span><span style="color: #001080">ref</span><span style="color: #000000">:</span><span style="color: #000000FF"> </span><span style="color: #267F99">React</span><span style="color: #000000FF">.</span><span style="color: #267F99">LegacyRef</span><span style="color: #000000FF">&lt;</span><span style="color: #267F99">HTMLDivElement</span><span style="color: #000000FF">&gt;) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> {</span>
+<span style="color: #000000FF">                            </span><span style="color: #AF00DB">return</span><span style="color: #000000FF"> </span><span style="color: #800000">&lt;div</span>
+<span style="color: #000000FF">                                </span><span style="color: #FF0000">ref</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #001080">ref</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">                                </span><span style="color: #FF0000">style</span><span style="color: #000000">=</span><span style="color: #0000FF">{</span><span style="color: #000000FF">{</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">width:</span><span style="color: #000000FF"> </span><span style="color: #098658">100</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">height:</span><span style="color: #098658">100</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">transition:</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;all 5000ms&#039;</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">display:</span><span style="color: #000000FF"> </span><span style="color: #001080">display</span><span style="color: #000000FF">,</span>
+<span style="color: #000000FF">                                    </span><span style="color: #001080">backgroundColor:</span><span style="color: #000000FF"> </span><span style="color: #A31515">&#039;red&#039;</span>
+<span style="color: #000000FF">                                }</span><span style="color: #0000FF">}</span>
+<span style="color: #000000FF">                            </span><span style="color: #800000">&gt;</span><span style="color: #000000FF">高度切换</span>
+<span style="color: #000000FF">                            </span><span style="color: #800000">&lt;/div&gt;</span>
+<span style="color: #000000FF">                        }</span><span style="color: #0000FF">}</span>
+<span style="color: #000000">                    </span><span style="color: #800000">&lt;/</span><span style="color: #267F99">EnableTransition</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">                    </span><span style="color: #800000">&lt;button</span><span style="color: #000000"> </span><span style="color: #FF0000">onClick</span><span style="color: #000000">=</span><span style="color: #0000FF">{this</span><span style="color: #000000FF">.</span><span style="color: #001080">onToggle3</span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span><span style="color: #000000">toggle</span><span style="color: #800000">&lt;/button&gt;</span>
+<span style="color: #000000">                </span><span style="color: #800000">&lt;/div&gt;</span>
+<span style="color: #000000">            </span><span style="color: #800000">&lt;/div&gt;</span>
+<span style="color: #000000">        );</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">}</span>
+</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/enabletransitionprops.html" class="tsd-kind-icon">Enable<wbr>Transition<wbr>Props</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#default" class="tsd-kind-icon">default</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

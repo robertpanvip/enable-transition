@@ -1,2 +1,2 @@
-// @ts-ignore
-export * from '../EnableTransition';
+
+export * from '../src/EnableTransition';

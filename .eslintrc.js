@@ -150,7 +150,7 @@ module.exports = {
         'no-lone-blocks': 0,
         'no-return-await': 0,
         'no-underscore-dangle': 0,
-        '@typescript-eslint/no-var-requires':0
-
+        '@typescript-eslint/no-var-requires':0,
+        '@typescript-eslint/ban-types':0
     }
 };

@@ -13,7 +13,7 @@ module.exports = function () {
     });
     gulp.task('compile-tsd', () => {
         return gulp.src([
-            '../../EnableTransition.tsx',
+            '../../src/**.tsx',
         ]).pipe(logger({
             before: 'generate tsd...',
             after: 'generate tsd complete!',
@@ -50,7 +50,7 @@ module.exports = function () {
     gulp.task('compile-with-lib', () => {
 
         return gulp.src([
-            '../../EnableTransition.tsx'
+            '../../src/**.tsx'
         ])
             .pipe(logger({
                 before: 'Starting translate ...',
